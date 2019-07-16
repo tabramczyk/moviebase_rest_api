@@ -1,0 +1,14 @@
+version: '2'  
+services:
+  web:
+    build: .
+    container_name: moviebase_web
+    depends_on:
+      - db
+    volumes:
+      - ./src:/src
+    expose:
+      - "8000"
+  db:
+    image: nouchka/sqlite3:latest
+    container_name: moviebase_db
