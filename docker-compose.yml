@@ -9,6 +9,8 @@ services:
       - ./src:/src
     expose:
       - "8000"
+    ports:
+      - 8000:8000
   db:
     image: nouchka/sqlite3:latest
     container_name: moviebase_db

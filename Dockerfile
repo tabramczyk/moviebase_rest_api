@@ -9,4 +9,4 @@ ADD ./src /src
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN python manage.py collectstatic --no-input;python manage.py makemigrations;python manage.py migrate;
-CMD exec gunicorn moviebase.wsgi:application --bind 0.0.0.0:$PORT --workers 3
+CMD exec gunicorn moviebase.wsgi:application --bind 0.0.0.0:8000 --workers 3
