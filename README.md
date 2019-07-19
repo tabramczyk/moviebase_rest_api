@@ -23,3 +23,12 @@ You need Sqlite >=3.25.
 
 ### Notes
 You probably need ```sudo``` for docker.
+
+## Endpoints
+```
+GET /movies
+POST /movies
+GET /comments
+POST /comments
+GET /top
+```
